@@ -3,8 +3,6 @@ import { Box, Button, Stack, TextField } from "@mui/material";
 import { useState } from "react";
 const backgroundImage = '/Chatbox.jpg';
 
-
-
 export default function Home() {
   const [messages, setMessages] = useState([
     { role: 'assistant', content: 'Hello! How can I assist you today?' }
@@ -57,8 +55,6 @@ export default function Home() {
   };
 
   return (
-
-    
     <Box
       width="100vw"
       height="100vh"
@@ -131,12 +127,12 @@ export default function Home() {
                 p={1}
               >
                 <Box
-                  bgcolor={message.role === 'assistant' ? 'primary.main' : 'secondary.main'}
+                  bgcolor={message.role === 'assistant' ? '#FF8C8C' : '#87CEFA'} // Darker Pink and Darker Light Blue
                   color="white"
                   borderRadius="16px"
                   p={2}
                   maxWidth="80%"
-                  wordbreak="break-word"
+                  wordBreak="break-word"
                   sx={{
                     position: 'relative',
                     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
@@ -147,7 +143,7 @@ export default function Home() {
                       width: 0,
                       height: 0,
                       border: '10px solid transparent',
-                      borderLeftColor: message.role === 'assistant' ? 'primary.main' : 'secondary.main',
+                      borderLeftColor: message.role === 'assistant' ? '#FF8C8C' : '#87CEFA', // Darker Pink and Darker Light Blue
                       borderRight: 'none',
                       borderTop: 'none',
                       marginTop: '-10px',
